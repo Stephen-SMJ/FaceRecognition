@@ -1,8 +1,10 @@
 import axios from "axios";
 import router from "./router";
 import Element from "element-ui"
-
-axios.defaults.baseURL = "https://pdf.xuyijie.icu";
+//http://101.43.11.242:8089
+//http://127.0.0.1:8089
+//https://pdf.xuyijie.icu
+axios.defaults.baseURL = "https://pdf.xuyijie.icu/faceRec";
 
 const request = axios.create({
     timeout: 15000,
