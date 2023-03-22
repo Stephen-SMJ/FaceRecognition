@@ -100,7 +100,8 @@ export default {
           if (res.data.code === 200){
             // 关闭摄像头
             this.faceOption.thisVideo.srcObject.getTracks()[0].stop();
-            localStorage.setItem("face_token",res.data.token);
+            localStorage.setItem("faceToken",res.data.token);
+            console.log("faceToken in index.vue", res.data.token);
             localStorage.setItem("username",res.data.name);
             this.$message.success(res.data.msg)
             this.$router.push("/home")

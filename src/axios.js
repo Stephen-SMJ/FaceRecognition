@@ -1,8 +1,9 @@
 import axios from "axios";
 import router from "./router";
 import Element from "element-ui"
-
-axios.defaults.baseURL = "https://pdf.xuyijie.icu/faceRec";
+//https://pdf.xuyijie.icu/faceRec
+//http://127.0.0.1:8089
+axios.defaults.baseURL = "https://pdf.xuyijie.icu/";
 
 const request = axios.create({
     timeout: 15000,
@@ -12,7 +13,8 @@ const request = axios.create({
 })
 
 request.interceptors.request.use(config => {
-    config.headers['face_token'] = localStorage.getItem("face_token");
+    config.headers['faceToken'] = localStorage.getItem("faceToken");
+    console.log("faceToken in axios",config.headers)
     return config
 })
 
