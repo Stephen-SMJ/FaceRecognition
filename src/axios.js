@@ -13,8 +13,8 @@ const request = axios.create({
 })
 
 request.interceptors.request.use(config => {
-    config.headers['faceToken'] = localStorage.getItem("faceToken");
-    console.log("faceToken in axios",config.headers)
+    config.headers['face_token'] = localStorage.getItem("face_token");
+    console.log("face_token in axios",config.headers)
     return config
 })
 

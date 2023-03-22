@@ -42,9 +42,9 @@ const router = new VueRouter({
 
 router.beforeEach((to,from,next)=>{
   if(to.path === '/') return next()
-  let faceToken = localStorage.getItem("faceToken");
-  console.log("faceToken in router",faceToken);
-  if (!faceToken) return next("/");
+  let face_token = localStorage.getItem("face_token");
+  console.log("face_token in router",face_token);
+  if (!face_token) return next("/");
   next()
 })
 
